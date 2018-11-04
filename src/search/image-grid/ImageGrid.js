@@ -31,7 +31,7 @@ export default class ImageGrid extends Component {
         thumbnail: item.thumb,
         alt: item.description,
         thumbnailWidth: dimensions.width,
-        thumbnailHeight: "auto" //dimensions.height
+        thumbnailHeight: dimensions.height
       };
     });
   };
