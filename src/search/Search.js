@@ -17,7 +17,10 @@ class Search extends Component {
       this.text.value = "";
       sendContent(content).then(res => {
         console.log("response:", res);
-        this.setState({ result: res });
+        this.setState({
+          result: res,
+          submitting: false
+        });
       });
     });
   };
