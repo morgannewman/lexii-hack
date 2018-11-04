@@ -1,6 +1,7 @@
+import "./ImageGrid.scss";
 import React, { Component } from "react";
 import Url from "url-parse";
-import Gallery from "react-grid-gallery";
+import Gallery from "./Gallery";
 
 // {
 //   src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
@@ -21,32 +22,24 @@ const getDimensions = url => {
 };
 
 export default class ImageGrid extends Component {
-  generateImageMarkup = () => {
+  parseImages = () => {
     const { images } = this.props.data;
     return images.map(item => {
-      const dimensions = getDimensions(item.thumb);
+      // const dimensions = getDimensions(item.thumb);
 
-      return {
-        src: item.regular,
-        thumbnail: item.thumb,
-        alt: item.description,
-        thumbnailWidth: dimensions.width,
-        thumbnailHeight: dimensions.height
-      };
+      return item.regular;
     });
   };
 
   handleImageClick = () => {};
 
   renderImages = () => {
-    const images = this.generateImageMarkup();
+    const images = this.parseImages();
     console.log(images);
     return (
-      <Gallery
-        images={images}
-        backdropClosesModal={true}
-        showImageCount={false}
-      />
+      <div className="gallery-container">
+        <Gallery images={images} />
+      </div>
     );
   };
 
