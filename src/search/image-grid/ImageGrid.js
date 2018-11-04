@@ -1,6 +1,5 @@
 import "./ImageGrid.scss";
 import React, { Component } from "react";
-import Url from "url-parse";
 import Gallery from "./Gallery";
 
 export default class ImageGrid extends Component {
@@ -8,7 +7,8 @@ export default class ImageGrid extends Component {
     const { images } = this.props.data;
     console.log(images);
     return images.map(item => {
-      item = JSON.parse(item);
+      // TODO: Activate this before deploying. Real data needs parsing here.
+      // item = JSON.parse(item);
       return item.regular;
     });
   };

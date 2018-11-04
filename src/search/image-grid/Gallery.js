@@ -14,7 +14,7 @@ export default class Gallery extends React.Component {
   renderImageContent(src, index) {
     return (
       <div onClick={e => this.openModal(e, index)}>
-        <img src={src} key={src} />
+        <img src={src} key={src} alt="placeholder" />
       </div>
     );
   }
@@ -22,13 +22,13 @@ export default class Gallery extends React.Component {
     this.setState({ currentIndex: index });
   }
   closeModal(e) {
-    if (e != undefined) {
+    if (e !== undefined) {
       e.preventDefault();
     }
     this.setState({ currentIndex: null });
   }
   findPrev(e) {
-    if (e != undefined) {
+    if (e !== undefined) {
       e.preventDefault();
     }
     this.setState(prevState => ({
@@ -36,7 +36,7 @@ export default class Gallery extends React.Component {
     }));
   }
   findNext(e) {
-    if (e != undefined) {
+    if (e !== undefined) {
       e.preventDefault();
     }
     this.setState(prevState => ({
@@ -98,7 +98,7 @@ class GalleryModal extends React.Component {
         <div isOpen={!!src} className="modal">
           <div className="modal-body">
             <a
-              href="#"
+              href="/search"
               className="modal-close"
               onClick={closeModal}
               onKeyDown={this.handleKeyDown}
@@ -107,7 +107,7 @@ class GalleryModal extends React.Component {
             </a>
             {hasPrev && (
               <a
-                href="#"
+                href="/prev"
                 className="modal-prev"
                 onClick={findPrev}
                 onKeyDown={this.handleKeyDown}
@@ -117,7 +117,7 @@ class GalleryModal extends React.Component {
             )}
             {hasNext && (
               <a
-                href="#"
+                href="/next"
                 className="modal-next"
                 onClick={findNext}
                 onKeyDown={this.handleKeyDown}
@@ -125,7 +125,7 @@ class GalleryModal extends React.Component {
                 &rsaquo;
               </a>
             )}
-            <img src={src} />
+            <img src={src} alt="placeholder" />
             <p className="gallery-context">
               <CopyUrl className="junk" value="http://google.com" />
             </p>
