@@ -13,7 +13,9 @@ class Landing extends Component {
     this.get();
   }
   get() {
-    sendContent({ test: "data" }).then(res => {
+    sendContent({
+      content: "lorem ipsum teehee this is an article about JavaScript"
+    }).then(res => {
       this.setState({ content: JSON.stringify(res) });
     });
   }
