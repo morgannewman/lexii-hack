@@ -11,4 +11,15 @@
 
 .footer-text {
   color: $white;
+  text-align: center;
+  padding: 0 2%;
+}
+
+.footer a {
+  color: $white;
+  text-decoration: none;
+}
+
+.footer a:visited {
+  color: $white;
 }

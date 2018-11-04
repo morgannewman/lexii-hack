@@ -99,7 +99,7 @@ $large: 720px;
   top: 0;
   left: 0;
 }
-.modal-body a {
+.modal-controls {
   position: absolute;
   display: inline;
   color: $black;
@@ -140,7 +140,22 @@ $large: 720px;
   width: 100%;
   background: $white;
   margin-top: -6px;
+  // text-align: center;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+
+.gallery-context-attribution {
+  width: 100%;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  color: lighten($black, 15%);
+  padding-bottom: 8px;
+  a {
+    display: inline;
+    font-size: 1em;
+    color: $black;
+    &:visited {
+      color: $black;
+    }
+  }
 }

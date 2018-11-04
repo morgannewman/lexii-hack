@@ -18,11 +18,18 @@
   padding: 0 4%;
 }
 
+.search-form-title {
+  padding-bottom: 16px;
+  color: $black;
+  font-weight: bold;
+  font-size: 1.8em;
+}
 .search-input {
   resize: none;
   width: 100%;
   min-height: 320px;
   max-height: 600px;
+  padding: 8px;
 }
 
 .search-submit {
@@ -47,6 +54,21 @@
   width: 64px;
   height: 64px;
 }
+
+.search-submit {
+  background: none;
+  border: none;
+  color: $white;
+  background: $primary;
+  font-size: 1.3em;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .search-loading div {
   position: absolute;
   top: 27px;

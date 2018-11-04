@@ -3,13 +3,13 @@ import React, { Component } from "react";
 import Nav from "../common/Nav";
 import Footer from "../common/Footer";
 import sendContent from "../api";
-import MOCK_DATA from "../MOCK_DATA";
+// import MOCK_DATA from "../MOCK_DATA";
 import ImageGrid from "./image-grid/ImageGrid";
 
 class Search extends Component {
   state = {
     submitting: false,
-    result: MOCK_DATA
+    result: null
   };
 
   handleSubmit = e => {
@@ -29,10 +29,13 @@ class Search extends Component {
     return (
       <div className="search-form-container">
         <form className="search-form" onSubmit={this.handleSubmit}>
+          <h1 className="search-form-title">Find the Perfect Image</h1>
           <div className="search-container">
             <textarea
               className="search-input"
               ref={text => (this.text = text)}
+              required
+              placeholder="Your masterpiece == here..."
             />
             <button
               className="search-submit"

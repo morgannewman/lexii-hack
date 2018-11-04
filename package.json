@@ -8,6 +8,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.6.0",
     "react-grid-gallery": "^0.5.3",
+    "react-icons": "^3.2.2",
     "react-scripts": "2.1.1",
     "react-spinners": "^0.4.7",
     "simple-react-router": "0.0.17",
