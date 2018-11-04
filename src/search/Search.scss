@@ -1,0 +1,35 @@
+.search-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  height: 100%;
+}
+
+.search-form {
+  margin-top: 64px;
+  display: block;
+  // min-width: 320px;
+  width: 100%;
+  max-width: 768px;
+  position: relative;
+  padding: 0 4%;
+}
+
+.search-input {
+  resize: none;
+  width: 100%;
+  min-height: 320px;
+  max-height: 600px;
+}
+
+.search-submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
+
+.json-testing {
+  max-width: 100%;
+}

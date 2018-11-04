@@ -1,1 +1,15 @@
 @import "reset";
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+}
