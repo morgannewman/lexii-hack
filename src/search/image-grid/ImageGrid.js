@@ -18,7 +18,7 @@ export default class ImageGrid extends Component {
     // console.log(images);
     return (
       <div className="gallery-container">
-        <Gallery images={images} />
+        <Gallery images={images} data={this.props.data} />
       </div>
     );
   };

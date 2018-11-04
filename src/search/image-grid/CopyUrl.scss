@@ -1,0 +1,65 @@
+@import "../../scss/colors.scss";
+
+.copy-container {
+  margin-top: -8px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  position: relative;
+}
+
+.copy-alert {
+  color: $black;
+  position: absolute;
+  top: 6px;
+  // margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.copy-box {
+  background: $primary;
+  max-width: 300px;
+  // padding: 8px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.copy-clickarea {
+  margin: 0;
+  padding: 0;
+  color: $white;
+  background: none;
+  border: none;
+  width: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+  position: relative;
+}
+
+.copy-clickarea-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-clickarea-text {
+  text-align: left;
+  font-size: 1.5em;
+  padding: 8px;
+  min-width: 200px;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.copy-clickarea-icon {
+  padding: 8px;
+  background: darken($primary, 10%);
+  height: 100%;
+  font-size: 1.5em;
+  border-radius: 10px;
+}

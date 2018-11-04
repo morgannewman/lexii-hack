@@ -57,6 +57,7 @@ export default class Gallery extends React.Component {
           hasPrev={this.state.currentIndex > 0}
           hasNext={this.state.currentIndex + 1 < images.length}
           src={images[this.state.currentIndex]}
+          data={this.props.data.images[this.state.currentIndex]}
         />
       </div>
     );
@@ -79,6 +80,7 @@ class GalleryModal extends React.Component {
     if (e.keyCode === 37 && this.props.hasPrev) this.props.findPrev();
     if (e.keyCode === 39 && this.props.hasNext) this.props.findNext();
   }
+
   render() {
     const {
       closeModal,
@@ -99,7 +101,7 @@ class GalleryModal extends React.Component {
           <div className="modal-body">
             <a
               href="/search"
-              className="modal-close"
+              className="modal-controls modal-close"
               onClick={closeModal}
               onKeyDown={this.handleKeyDown}
             >
@@ -108,7 +110,7 @@ class GalleryModal extends React.Component {
             {hasPrev && (
               <a
                 href="/prev"
-                className="modal-prev"
+                className="modal-controls modal-prev"
                 onClick={findPrev}
                 onKeyDown={this.handleKeyDown}
               >
@@ -118,7 +120,7 @@ class GalleryModal extends React.Component {
             {hasNext && (
               <a
                 href="/next"
-                className="modal-next"
+                className="modal-controls modal-next"
                 onClick={findNext}
                 onKeyDown={this.handleKeyDown}
               >
@@ -127,7 +129,20 @@ class GalleryModal extends React.Component {
             )}
             <img src={src} alt="placeholder" />
             <p className="gallery-context">
-              <CopyUrl className="junk" value="http://google.com" />
+              <CopyUrl value={this.props.data.regular} />
+              <p className="gallery-context-attribution">
+                Credit:{" "}
+                <a
+                  target="blank"
+                  href={this.props.data.user["portfolio_url"] || "#"}
+                >
+                  {`@${this.props.data.user.username}`}
+                </a>{" "}
+                on{" "}
+                <a target="blank" href={this.props.data.links.html}>
+                  Unsplash
+                </a>
+              </p>
             </p>
           </div>
         </div>
