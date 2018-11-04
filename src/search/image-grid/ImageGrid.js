@@ -8,7 +8,7 @@ export default class ImageGrid extends Component {
     console.log(images);
     return images.map(item => {
       // TODO: Activate this before deploying. Real data needs parsing here.
-      // item = JSON.parse(item);
+      item = JSON.parse(item);
       return item.regular;
     });
   };
