@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "querystringify": "^2.1.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-grid-gallery": "^0.5.3",
     "react-scripts": "2.1.1",
-    "simple-react-router": "0.0.17"
+    "react-spinners": "^0.4.7",
+    "simple-react-router": "0.0.17",
+    "spinkit": "^1.2.5",
+    "url-parse": "^1.4.3"
   },
   "scripts": {
     "start": "react-scripts start",

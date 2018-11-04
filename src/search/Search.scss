@@ -1,3 +1,5 @@
+@import "../scss/colors.scss";
+
 .search-form-container {
   display: flex;
   flex-direction: column;
@@ -30,6 +32,67 @@
   float: right;
 }
 
-.json-testing {
-  max-width: 100%;
+.search-loading-container {
+  display: flex;
+  // flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: -64px;
+}
+
+.search-loading {
+  display: block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.search-loading div {
+  position: absolute;
+  top: 27px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: lighten($black, 10%);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.search-loading div:nth-child(1) {
+  left: 6px;
+  animation: search-loading1 0.6s infinite;
+}
+.search-loading div:nth-child(2) {
+  left: 6px;
+  animation: search-loading2 0.6s infinite;
+}
+.search-loading div:nth-child(3) {
+  left: 26px;
+  animation: search-loading2 0.6s infinite;
+}
+.search-loading div:nth-child(4) {
+  left: 45px;
+  animation: search-loading3 0.6s infinite;
+}
+@keyframes search-loading1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes search-loading3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes search-loading2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
 }
