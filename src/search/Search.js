@@ -8,7 +8,7 @@ import ImageGrid from "./image-grid/ImageGrid";
 
 class Search extends Component {
   state = {
-    submitting: true,
+    submitting: false,
     result: null
   };
 
