@@ -132,16 +132,25 @@ class GalleryModal extends React.Component {
               <CopyUrl value={this.props.data.regular} />
               <p className="gallery-context-attribution">
                 Credit:{" "}
-                <a
-                  target="blank"
-                  href={this.props.data.user["portfolio_url"] || "#"}
-                >
-                  {`@${this.props.data.user.username}`}
-                </a>{" "}
+                {this.props.data.user["portfolio_url"] ? (
+                  <a
+                    target="blank"
+                    href={this.props.data.user["portfolio_url"] || "#"}
+                  >
+                    {this.props.data.user.username || "Anonymous"}
+                  </a>
+                ) : (
+                  this.props.data.user.username || "Anonymous"
+                )}{" "}
                 on{" "}
-                <a target="blank" href={this.props.data.links.html}>
-                  Unsplash
-                </a>
+                {
+                  <a
+                    target="blank"
+                    href={this.props.data.links.html || "https://unsplash.com/"}
+                  >
+                    Unsplash
+                  </a>
+                }
               </p>
             </p>
           </div>

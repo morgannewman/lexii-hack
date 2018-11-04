@@ -3,13 +3,13 @@ import React, { Component } from "react";
 import Nav from "../common/Nav";
 import Footer from "../common/Footer";
 import sendContent from "../api";
-// import MOCK_DATA from "../MOCK_DATA";
+import MOCK_DATA from "../MOCK_DATA";
 import ImageGrid from "./image-grid/ImageGrid";
 
 class Search extends Component {
   state = {
     submitting: true,
-    result: null
+    result: MOCK_DATA
   };
 
   handleSubmit = e => {
